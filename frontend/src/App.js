@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+
 function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -37,6 +39,8 @@ function App() {
   };
 
   return (
+  
+        
     <div className="App">
       {/* Bara superioară statică */}
       <div className="top-bar">
@@ -45,6 +49,16 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>IT LSAC</p>
       </div>
+      <div className="navbar">
+          <div className="left-section">
+            <img src={logo} className="App-logo" alt="logo" />
+            <p>IT LSAC</p>
+          </div>
+          <div className="right-section">
+            <button className="navbar-button">Login</button>
+            <button className="navbar-button">Register</button>
+          </div>
+        </div>
 
       {/* Restul conținutului paginii */}
       <div className="main-content">
@@ -82,7 +96,6 @@ function App() {
             Login
           </button>
         </div>
-
         <a
           className="App-link"
           href="https://www.instagram.com/lsacbucuresti/"

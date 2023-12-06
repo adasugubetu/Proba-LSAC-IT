@@ -1,5 +1,3 @@
-console.log ("Primul meu")
-
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -39,21 +37,11 @@ app.post('/register', (req, res) => {
   }
 });
 
-const Navbar = () => {
-    return (
-      <div className="navbar">
-        <div className="left-section">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>IT LSAC</p>
-        </div>
-        <div className="right-section">
-          <button className="navbar-button">Login</button>
-          <button className="navbar-button">Register</button>
-        </div>
-      </div>
-    );
-  };
-
 app.listen(port, () => {
   console.log(`Serverul rulează la adresa http://localhost:${port}`);
 });
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors());
+
+const cors = require("cors");
